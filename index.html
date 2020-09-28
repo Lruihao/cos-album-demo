@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>cos-album</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="public/image/icon.ico">
+    <link rel="stylesheet" type="text/css" href="public/css/cos-album.css">
+  </head>
+  <body>
+
+    <div class="album-comments" id="comments"></div>
+
+    <footer>
+      © 2019-2020
+      <a href="https://lruihao.cn" target="_blank">lruihao.cn</a> -
+      <a href="https://github.com/Lruihao/cos-album" target="_blank">Github</a>
+    </footer>
+
+    <script type="text/javascript" src="public/js/cos-album.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+      /*相册*/
+      new Cosalbum({
+        'xmlLink': 'https://img-xxxxxxxxx.cos.ap-chengdu.myqcloud.com',
+        'prependTo': 'body',
+        'viewNum': 8
+      });
+      /*评论*/
+      new Valine({
+        el: '.album-comments',
+        verify: false,
+        notify: false,
+        appId: 'xxxxxxxxxxxxxxxxxxxxxx',
+        appKey: 'xxxxxxxxxxxxxxxxxxxxxx',
+        placeholder: 'just go go',
+        avatar: 'wavatar',
+        pageSize: 10,
+        lang: 'zh-cn'
+      });
+    </script>
+    
+  </body>
+</html>
