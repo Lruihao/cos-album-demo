@@ -5,7 +5,7 @@
     <title>cos-album</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="public/image/icon.ico">
-    <link rel="stylesheet" type="text/css" href="public/css/cos-album.css">
+    <link rel="stylesheet" type="text/css" href="public/css/cos-album.min.css?v=1.1.2">
   </head>
   <body>
 
@@ -17,14 +17,15 @@
       <a href="https://github.com/Lruihao/cos-album" target="_blank">Github</a>
     </footer>
 
-    <script type="text/javascript" src="public/js/cos-album.js"></script>
+    <script type="text/javascript" src="public/js/cos-album.min.js?v=1.1.2"></script>
     <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
     <script>
       /*相册*/
       new Cosalbum({
         'xmlLink': 'https://img-xxxxxxxxx.cos.ap-chengdu.myqcloud.com',
         'prependTo': 'body',
-        'viewNum': 8
+        'viewNum': 4,
+        'imgUrl': '//img.lruihao.cn'
       });
       /*评论*/
       new Valine({
